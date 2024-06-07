@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vi vil meget gerne høre fra dig, hvis du har brug for hjælp eller spørgsmål. Du kan kontakte os på mail, su-køkkenet eller tlf. +45 00 00 00 00.">
+    <title>Kontakt os</title>
+    <!-- Link til css style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link til google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Link til font awesome (ikoner) -->
+    <script src="https://kit.fontawesome.com/7c3dc2fe6b.js" crossorigin="anonymous"></script>
+    <!-- Link til andre HTML -->
+    <link rel="stylesheet" href="forside.html">
+    <link rel="stylesheet" href="kokken-hacks.html">
+    <link rel="stylesheet" href="opskrifter.html">
+    <link rel="stylesheet" href="kontakt-os.html">
+    <link rel="stylesheet" href="hurtige-retter.html">
+    <link rel="stylesheet" href="airfryer-retter.html">
+    <link rel="stylesheet" href="sunde-retter.html">
+    <link rel="stylesheet" href="veganske-retter.html">
+    <link rel="stylesheet" href="desserter.html">
+    <link rel="stylesheet" href="spaghetti-carbonara.html">
+    <link rel="stylesheet" href="stegt-flaesk.html">
+    <link rel="stylesheet" href="kyllingebryst-m-salat.html">
+    <link rel="stylesheet" href="tortilla.html">
+    <link rel="stylesheet" href="dahl.html">
+    <link rel="stylesheet" href="chokolade-cookies.html">
+
+    <!-- Logo ikon til fane -->
+    <link rel="shortcut icon" type="x-icon" href="img/logo-kontakt.png">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <a href="forside.html">
+            <img class="logo" src="img/Design_Logo.png" alt="logo af su-køkkenet">
+        </a>
+
+        <!-- Nav menu -->
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a class="nav-link" href="opskrifter.html">Opskrifter <i class="fa-solid fa-angle-down"></i></a>
+                <!-- Dropdown menu -->
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="hurtige-retter.html">Hurtige retter</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="airfryer-retter.html">Airfryer retter</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="sunde-retter.html">Sunde retter</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="veganske-retter.html">Veganske retter</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="desserter.html">Desserter</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="kokken-hacks.html">Køkkenhacks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link paa-side" href="kontakt-os.html">Kontakt os</a>
+            </li>
+            
+        </ul>
+
+        <!-- Search icon -->
+        <a href="#">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <!-- Hamburger menu -->
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </nav>
+
+    <!-- Streg under nav -->
+    <hr class="hr">
+
+    <!-- Kontakt os -->
+    <div class="container">
+        <div class="kontakt">
+            <div class="kontakt-section">
+                <!-- Telefon og mail -->
+                <div class="kontakt-div">
+                    <h2>Fang os her</h2>
+                    <div class="kontakt-box">E-MAIL</div>
+                    <a class="mail" href="#">su-køkkenet@gmail.com</a>
+                    <div class="kontakt-box">MOBIL</div>
+
+                    <p>+45 00 00 00 00</p>
+                </div>
+          
+                <!-- Sociale medier -->
+                <div class="kontakt-div">
+                    <div class="kontakt-box">SOCIALE MEDIER</div>
+                    <p>Følg os her og udvid din horisont!</p>
+                    <div class="sociale-medier">
+                        <a href="https://www.instagram.com/sukoekkenet.dk/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCSIwOjGExdCxVHXvzzcHe9g"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@su_kokkenet?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://pin.it/40laCp9Nl"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Logo billede til kontakt side -->
+            
+            <a href="forside.html">
+                <img src="img/logo-kontakt.png" alt="logo til kontakt side">
+            </a>    
+        
+   
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <img class="footer-img-stor" src="img/footer-stor.png" alt="stor gradient billede af køkken til footer">
+        <footer class="green-footer"> © SU-KØKKENET.DK </footer>
+    </div>
+
+    <!-- Javascript til burgermenu -->
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        // Aktivere hamburger, når man trykker på hamburger bliver det til et "x" og viser navigations menuen
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active")
+            navMenu.classList.toggle("active")
+        })
+
+        // Få menuen til at refreshe når man trykker på et menu-link (for each = for each link adder vi en listener)
+        document.querySelectorAll("nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active")
+            navMenu.classList.remove("active")
+        }))
+
+    </script>
+
+</body>
+</html>

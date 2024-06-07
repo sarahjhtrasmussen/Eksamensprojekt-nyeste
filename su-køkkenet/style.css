@@ -1,0 +1,1470 @@
+
+/* ========================================================= GENERELT ========================================================= */
+
+/* "Css reset", * tager fat i alle elementer */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+/* Body tag i HTML */
+body{
+    font-family: kalam;
+    font-weight: 400;
+    color:black;
+}
+
+/* Smooth scroll funktion til information side */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Alle h1 (header 1) */
+h1{
+    font-weight: 500;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 80px;
+    font-family: kalam;
+}
+
+/* Alle h2 (header 2) */
+h2{
+    font-family: kalam;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+/* Alle h3 (header 3) */
+h3{
+    font-family: kalam;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+/* Div container på alle sider */
+.container{
+    text-align: center;
+}
+
+/* ======================================================== NAVIGATION ======================================================== */
+
+/* Logo billede */
+.logo{
+    width:220px;
+    margin:13px;
+    margin-left: 20px;
+    padding: 9px 0px 0px 0px;
+    top:0;
+}
+
+/* Nav-link ændrer farve til rød når man er på siden */
+.nav-item .paa-side{
+    color: #8a9724;
+}
+
+/* Nav element der indeholder alt i navigation */
+nav{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+/* Nav menu (forældre til nav-item) */
+nav ul{
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-right: 50px;
+    position: absolute;
+    right:0;
+    text-align: center;
+    align-items: center;
+    
+}
+
+/* Opskrifter, køkken hacks, kontakt os*/
+.nav-item{
+    display: flex;
+    margin: 0 5px;
+}
+
+/* Nav-item link */
+.nav-item a{
+    color:black;
+    text-decoration: none;
+    line-height: 80px;
+    padding: 10px 15px;
+}
+
+/* Nav-item hover-effekt */
+.nav-item a:hover{
+    color: #8a9724;
+}
+
+/* Dropdown menu: Forældre til dropdown-item */
+.dropdown-menu{
+    position:absolute;
+    top:87px;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+
+/* Hover effekt til nav-item der gør dropdown-items synlige når man hover over den */
+.nav-item:hover > ul{
+    visibility: visible;    
+}
+
+/* Hurtige retter, airfryer retter, sunde retter, osv. */
+.dropdown-item{
+    position: relative;
+    margin: 0px 40px 4px 0px;
+    right:160px;
+    width:180px;
+    display: list-item;
+    background: white;
+    border: black solid 2px;
+}
+
+
+/* Generelt alle ikoner */
+.fa-solid{
+    color: black;
+}
+
+/* Hover effekt til ikon */
+.fa-solid:hover{
+    color: #1E4E59;
+}
+
+/* Search knap på navigation */
+.fa-magnifying-glass{
+    position: absolute;
+    top:40px;
+    right:25px;
+}
+
+/* Sort linje under navigation */
+.hr{
+    color: black;
+    border: black 1px solid;
+}
+
+
+/* ======================================================== BURGER MENU ======================================================== */
+
+/* Div til hamburger menu */
+.hamburger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top:35px;
+    right:60px;
+}
+
+/* Span til hamburger menu (3 sorte streger) */
+.bar{
+    display: block;
+    width:20px;
+    height:3px;
+    margin:5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: black;
+}
+
+/* ========================================================== FORSIDE ========================================================== */
+
+/* Div til forside der indeholder alt content */
+.forside{
+    text-align: center;
+}
+
+/* Header 1 på forside */
+.forside h1{
+    margin-top: 120px;
+}
+
+/* Forsidens tekst */
+.forside p{
+    padding:10px;
+    font-size: 22px;
+    margin-top:30px;
+}
+
+/* Baggrundsbillede på forside */
+.forside img{
+    margin: 105px 0px 0px 0px;
+    width:100%;
+    height:auto;
+    position: absolute;
+    top:0px;
+    left:0px;
+    /* Z-index på -1 gør at billedet bliver det bagerste lag*/
+    z-index: -1; 
+}
+
+/* Call-to-benefit knap */
+.btn{
+    background: #FFB128;
+    border: #FFB128;
+    padding: 10px 40px;
+    border-radius: 15px;
+    font-size: 23px;
+    box-shadow: black 4px 4px;
+    font-family: kalam;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+}
+
+
+/* Knap hover effekt */
+.btn:hover{
+    background: #C2E0F2;
+    transition: 0.5s;
+}
+
+/* Pil ned kun på forside */
+.fa-arrow-down{
+    font-size: 50px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+
+/* ======================================================== INFORMATION ======================================================== */
+
+
+/* Information div kun til alt tekst, brugt til at lave kassen udenom teksten */
+.information{
+    background-color: white;
+    border: black 2px solid;
+    border-radius: 15px;
+    margin:40px 10% 60px;
+    align-content: center;
+}
+
+/* Tekst på information */
+.information p{
+    line-height: 40px;
+    text-align: start;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-weight: 300;
+}
+
+/* ========================================================== FOOTER ========================================================== */
+
+/* Footer billede til forside */
+.footer-img-forside{
+    position: relative;
+    width:100%;
+    bottom:11px;
+    padding-top: 10px;
+}
+
+/* Generel til footer billede på alle sider undtagen forside (invisible/gradient) */
+.footer-img-stor{
+    position: relative;
+    width:100%;
+    z-index: -1;
+}
+
+/* Nederste grønne footer med su-køkkenet.dk */
+.green-footer{
+    background: #B1BF4B;
+    text-align: center;
+    padding: 15px;
+    margin-top: -20px;
+}
+
+/* Position af den midterste footer på en opskrift side (det "break" der sker halvvejs på siden) */
+.sund-ret{
+    position: absolute;
+    top:1200px;
+}
+
+
+/* ==================================================== OPSKIFT-KATEGORIER ==================================================== */
+
+/* Forældre div til opskrift-kategori */
+.opskrifter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 40px 150px 0px;
+}
+
+/* Div til både billede og knap; barn til opskrifter */
+.opskrift-kategori{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Billede på de forskellige retter */
+.img-opskrift{
+    width:310px;
+}
+
+/* ========================================================== RETTER ========================================================== */
+
+
+/* Header til retter */
+.retter-header{
+    margin:100px 15px 50px;
+}
+
+/* Retter kort */
+.retter{
+    display: flex;
+    flex-direction: column;
+    width:33%;
+    padding:30px;
+    margin-bottom:40px;
+}
+
+/* Tekst på retter */
+.retter p{
+    font-family: zilla slab;
+    text-align: start;
+}
+
+/* Tekst til beskrivelse af hver ret */
+.ret-description{
+    padding:20px 0px;
+}
+
+/* Forældre div til retter (på alle sider, ikke kun sunder retter) */
+.sunde-retter{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0px 50px;
+}
+
+/* Den nederste div der indeholder stjerne og pris (få dem til at være row i stedet for column i flexbox) */
+.div-pris-stjerne{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Knap til retter */
+.btn-ret{
+    margin-bottom: 20px;
+    width:100%;
+}
+
+/* Link på knappen */
+.btn-ret a{
+    text-decoration: none;
+    color:black;
+}
+
+/* Star rating */
+.checked{
+    color:orange;
+}
+
+/* Low star rating */
+.low{
+    color:#F25430;
+}
+
+
+/* ============================================== FILTER DROPDOWN KNAP TIL RETTER ============================================== */
+
+
+/* Style dropdown button */
+.dropbtn{
+    background-color: white;
+    border:#000 2px solid;
+    padding: 10px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 2px 0px;
+    font-family: kalam;
+}
+
+/* Dropdown div bruges til placering af dropdown indhold */
+.dropdown{
+    position: absolute;
+    display: inline-block;
+    right:20px;
+    top:128px;
+}
+
+/* Dropdown content er skjult by default */
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: black 1px solid;
+}
+
+/* Dropdown content link (populære, budget og nyeste) */
+.dropdown-content a{
+    color:#000;
+    padding: 10px 51px;
+    text-decoration: none;
+    display: block;
+    border: 1px black solid;
+    font-size: 14px;
+    width:100%;
+}
+
+/* Vis dropdown menu når man hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Når man hover over dropdown-content skifter teksten farve */
+.dropdown-content a:hover {
+    color: #1E4E59;
+}
+
+
+/* =================================================== KYLLING OPSKRIFT SIDE =================================================== */
+
+/* Header med stjerner */
+.opskrift-header{
+    margin:100px 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Div til ingedienser, fremgangsmåde, personer, tid og budget */
+.opskrift{
+    margin-left: 20px;
+}
+
+/* Hele div til retter */
+.opskrift-retter{
+    margin:5%;
+}
+
+
+/* Liste med ingredienser */
+.ingredienser li{
+    list-style: none;
+    line-height: 30px;
+    text-align: start;
+}
+
+/* Header 3 på ingredienser (fremgangsmåde og ingredienser) */
+.ingredienser h3{
+    padding: 40px 0px 20px;
+    text-align: start;
+}
+
+/* Header 2 på en opskrift side */
+.opskrift-header h2{
+    padding:0px 60px;
+}
+
+/* Div til personer, tid og budget */
+.opskrift-info{
+    display: flex;
+    justify-content: start;
+    gap:35px;
+}
+
+/* Div med liste til fremgangsmåde */
+.fremgangsmaade{
+    display: flex;
+    text-align: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 70px 0px;
+    line-height: 50px;
+}
+
+/* Style til fremgangsmåde liste */
+.fremgangsmaade li{
+    list-style: decimal;
+}
+
+/* Flexbox div til alt undtagen header og stjerne */
+.opskrift-flexbox{
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: zilla slab;
+}
+
+/* Skjul opskrift billede til mobil KUN på en opskrift side sunde retter */
+.opskrift-img-mobil{
+    display: none;
+}
+
+/* Skjul det nederste billede af video KUN til opskrift sunde retter siden */
+.opskrift-video-mobil{
+    display: none;
+}
+
+/* Forældre div til opskrift-info, ingredienser og fremgangsmåde */
+.opskrift-skrift{
+    margin: 20px;
+}
+
+/* Opskrift video på en opskrift side undtagen sunde retter */
+.opskrift-video{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    gap:20px;
+    margin:20px;
+}
+
+/* Div til billede og video KUN til sunde retter siden */
+.sunde-retter-video{
+    width:100%;
+    margin: 0px 0px 50px;
+}
+
+/* Margin til billede */
+.sunde-retter-video img{
+    margin-top: 50px;
+}
+
+/* Placering af kig på køkken hacks til kyllinge ret*/
+.kig-paa-kokken-hacks{
+    position: absolute;
+    z-index:0;
+    right:20px;
+    top:700px;
+    width:11%;
+}
+
+
+/* Kommentar sektion på opskrift side */
+.opskrift-questions{
+    margin:100px 0px;
+}
+.opskrift-questions{
+    margin-top: 50%;
+}
+
+/* Div med alt til kommentar på opskrift side */
+.opskrifter-kommentar{
+    text-align: center;
+    margin-top: 100px;
+    padding:0px 100px;
+    font-size: 20px;
+}
+
+/* Input sektion til navn */
+#name{
+    width:100%;
+    padding:15px;
+    font-family: zilla slab;
+    font-size: 20px;
+    margin:10px;
+    box-sizing: border-box;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+/* Text area til formular */
+form textarea{
+    width:100%;
+    padding:15px 15px 100px;
+    font-family: zilla slab;
+    font-size: 20px;
+    margin:30px 10px;
+    box-sizing: border-box;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+/* H3 med "Navn" på formular */
+.opskrift-form h3{
+    text-align: start;
+    padding:0px 15px;
+}
+
+/* Div til rating*/
+.form-navn-stjerne{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+/* Dekoration af laveste stjerne */
+.form-star-1{
+    color:#7C7C7C;
+    font-size: 20px;
+}
+
+/* Hover effekt på laveste stjerne */
+.form-star-1:hover{
+    color:#F25430;
+}
+
+/* Dekoration af næstlaveste stjerne */
+.form-star-2{
+    color:#7C7C7C;
+    font-size: 20px;
+}
+
+/* Hover effekt på næstlaveste stjerne */
+.form-star-2:hover{
+    color:#ffe234;
+}
+
+/* Dekoration af midterste stjerne */
+.form-star-3{
+    color:#7C7C7C;
+    font-size: 20px;
+}
+
+/* Hover effekt på midterste stjerne */
+.form-star-3:hover{
+    color:#ffe234;
+}
+
+/* Dekoration af midterste stjerne */
+.form-star-4{
+    color:#7C7C7C;
+    font-size: 20px;
+}
+
+/* Hover effekt på midterste stjerne */
+.form-star-4:hover{
+    color:#FFB128;
+}
+
+/* Dekoration af højeste stjerne */
+.form-star-5{
+    color:#7C7C7C;
+    font-size: 20px;
+}
+
+/* Hover effekt på højeste stjerne */
+.form-star-5:hover{
+    color:#FFB128;
+}
+
+
+/* Send knap */
+.send{
+    text-align: right;
+}
+
+/* Store div til kommentar sektion under form */
+.kommentarer{
+    margin:100px 0px 0px;
+}
+
+/* Header 2 til kommentar sektion */
+.kommentarer h2{
+    font-weight: 300;
+    margin: 50px;
+}
+
+/* Navn på person */
+.form-navn-stjerne h3{
+    padding:20px;
+}
+
+/* Sort kasse med tekst (ikke til tilbagemelding af svar, kun til kommentarer) */
+.kommentarfelt{
+    text-align: start;
+    border:2px black solid;
+    padding:20px;
+    line-height: 50px;
+    margin-bottom:50px;
+    border-radius: 10px;
+
+}
+
+/* Ikon til svar */
+.fa-reply{
+    /* Ikonet bliver spejlvendt */
+    transform: scalex(-1);
+    font-size:60px;
+    padding:20px;
+}
+
+/* Div til svar (flex-box til kasse og ikon) */
+.kommentar-reply{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Div kun til svar */
+.kommentarfelt-reply{
+    text-align: start;
+    border:2px black solid;
+    padding:20px;
+    line-height: 50px;
+    margin-bottom:50px;
+    width:1000px;
+    border-radius: 10px;
+
+}
+
+/* ======================================================= OPSKRIFT SIDE ======================================================= */
+
+/* Flex-box til billeder og tekst */
+.opskrift-flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Video */
+.video{
+    width:530px;
+    height:100%;
+    padding-top: 100px;
+}
+
+/* Div med liste til fremgangsmåde */
+.fremgangsmaade-2{
+    display: flex;
+    text-align: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px 0px;
+    line-height: 50px;
+    max-width: 350px;
+}
+
+/* Style til fremgangsmåde liste */
+.fremgangsmaade-2 li{
+    list-style: decimal;
+}
+
+
+/* ======================================================= KØKKEN HACKS ======================================================= */
+
+/* Div til header 2 og beskrivende tekst på køkken hacks side */
+.kokken-header{
+    margin:50px;
+}
+
+/* Tekst på køkken header */
+.kokken-header p{
+    font-family: zilla slab;
+    font-size: 20px;
+}
+
+/* Forældre til kokken-kort */
+.kokken-hacks{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-top: 50px;
+}
+
+/* Indeholder knap, billede og tekst, barn til kokken-hacks */
+.kokken-kort{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:50px;
+}
+
+/* Tekst på kokken-kort */
+.kokken-kort p{
+    width: 370px;
+    text-align: start;
+    font-size: 20px;
+    padding: 20px 20px;
+    border-radius: 0px 0px 15px 15px;
+    font-family: zilla slab;
+    border: 1px solid black;
+}
+
+/* Alle billeder på kokken-kort */
+.kokken-hacks img{
+    padding: 0px 20px;
+    width:410px;
+}
+
+/* Køkken hacks titel på kort */
+.kokken{
+    display: flex;
+    width: 370px;
+    height: 80px;
+    font-size: 20px;
+    background-color: #C2E0F2;
+    box-shadow:none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid black;
+}
+
+/* Play knap til video */
+.fa-play{
+    font-size: 60px;
+    text-shadow: 0px 0px 5px #000;
+    position: absolute;
+}
+
+/* Hover effekt på play knap */
+.fa-play:hover{
+    font-size: 65px;
+}
+
+/* Kommentar section køkken hacks */
+.kokken-form h3{
+    text-align: start;
+    padding:0px 15px;
+}
+
+/* Div til kommentar sektion på køkken hacks */
+.kokken-kommentar{
+    text-align: center;
+    margin-top:100px; 
+    padding:0px 100px;
+    font-size: 20px;
+}
+
+/* Styling til beskrivende tekst under "Kommentarer", før formular */
+.kokken-questions{
+    margin:20px 15px 50px;
+    text-align: start;
+    font-family: zilla slab;
+}
+
+/* ======================================================= KONTAKT OS ======================================================== */
+
+/* Store div container til kontakt os side. Forældre til kontakt-section og billed div */
+.kontakt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 70px;
+}
+
+/* Div til telefon + mail og Sociale medier. Børn til kontakt-section */
+.kontakt-div{
+    text-align: start;
+    margin: 50px 0px;
+}
+
+/* Styling til telefon + mail og sociale medier div (ligner en blå knap) */
+.kontakt-box{
+    color:#1E4E59;
+    border-radius: 15px;
+    text-align: start;
+    font-size: 25px;
+}
+
+/* Forældre div til kontakt-div */
+.kontakt-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+
+}
+
+/* Størrelse af logo billede */
+.kontakt img{
+    width:60%;
+}
+
+/* Header 2 til kontakt side */
+.kontakt h2{
+    text-align: start;
+    margin-bottom: 40px;
+}
+
+/* Styling af mail link */
+.mail{
+    text-decoration: none;
+    color:black;
+}
+
+/* Sociale medier ikoner fylder det hele */
+.sociale-medier{
+    width:400px;
+}
+
+/* Sociale medier ikoner */
+.sociale-medier i{
+    color:#F25430;
+    font-size: 40px;
+    margin:0px 20px;
+    text-align: center;
+}
+
+/* Hover effekt til sociale medier ikoner */
+.sociale-medier i:hover{
+    color: #B1BF4B;
+}
+
+/* ========================================================== ANDET =========================================================== */
+
+/* Pil som går op på toppen af siden */
+.fa-arrow-up{
+    position: fixed;
+    bottom:70px;
+    right:18px;
+    font-size: 20px;
+    background-color: #C2E0F2;
+    padding:15px 18px;
+    border-radius: 50%;
+    border: 1.5px solid black;
+}
+
+/* Hover effekt til pil op */
+.fa-arrow-up:hover{
+    background-color: #F25430;
+    color:white;
+    border:none;
+    padding:17px 20px;
+}
+
+/* Pil tilbage på siden før */
+.fa-arrow-left{
+    position: absolute;
+    left:30px;
+    top:230px;
+    font-size: 20px;
+    background-color: #C2E0F2;
+    padding:15px 18px;
+    border-radius: 50%;
+    border: 1.5px solid black;
+
+}
+
+/* Hover effekt til pil tilbage */
+.fa-arrow-left:hover{
+    background-color: #F25430;
+    color:white;
+    border:none;
+    padding:17px 20px;
+}
+
+
+
+
+/* ======================================= BURGERMENU TIL MINDRE SKÆRME (IPAD OG MOBIL) ======================================= */
+
+
+@media screen and (max-width:768px){
+    
+    /* Vis hamburger menu i mindre skærm */
+    .hamburger{
+        display: block;
+    }
+
+    /* Brug af javascript til at aktivere hamburger menu */
+    .hamburger.active .bar:nth-child(2){
+        /* Hver gang man trykker på menuen forsvinder den midterne streg til at skabe en close menu */
+        opacity: 0;
+    }
+
+    /* Brug af javascript til at aktivere hamburger menu */
+    .hamburger.active .bar:nth-child(1){
+        /* Brug translate y til at stable to egenskaber oven på hinanden og rotere den 45 grader*/
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    /* Brug af javascript til at aktivere hamburger menu */
+    .hamburger.active .bar:nth-child(3){
+        /* Modsat af child-1 til at skabe en closing menu*/
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Nav-menu eller nav ul */
+    .nav-menu{
+        position: absolute;
+        left:-100%;
+        top:100px;
+        flex-direction: column;
+        background-color: white;
+        width:100%;
+        transition: 0.3s;
+        border-bottom: black solid 2px;
+        margin-top: 16px;
+        border-top: black solid 2px;
+        text-align: center;
+    }
+    
+
+    /* Brug af javascript til at aktivere hamburger menu */
+    .nav-menu.active{
+        /* Brugt til at synliggøre burgermenuen (den står på -100%)*/
+        left:0;
+    }
+
+    /* Undersider på "opskrifter" ikke synliggøres ved brug af hamburger menu */
+    .dropdown-menu{
+        display: none;
+    }
+
+}
+/* =========================================== SKÆRMSTØRRELSE MELLEM IPAD OG LAPTOP =========================================== */
+
+
+@media screen and (max-width: 1224px){
+
+    /* FORSIDE */
+
+   /* IPAD/LAPTOP: Forside header 1 */
+    .forside h1{
+        font-size: 60px;
+        margin-top: 50px;
+    }
+
+    /* IPAD/LAPTOP: Tekst på forside */
+    .forside p{
+        font-size: 20px;
+    }
+
+    /* IPAD/LAPTOP: Pil ned ikon */
+    .fa-arrow-down{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    /* IPAD/LAPTOP: Alle call-to-benefit knapper til denne skærmstørrelsen */
+    .btn{
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+
+    /* KØKKEN HACKS */
+
+    /* IPAD/LAPTOP: Beskrivende tekst på køkken header */
+    .kokken-header p{
+        font-size: 20px;
+    }
+
+    /* IPAD/LAPTOP: Tekst størrelse på køkken kort */
+    .kokken-kort p{
+        font-size: 20px;
+    }
+
+}
+
+
+/* ======================================================== IPAD SKÆRM ======================================================== */
+
+@media screen and (max-width:768px){
+    
+    /* IPAD GENERELT */
+
+    /* IPAD: Header 1 på forsiden */
+    .forside h1{
+        font-size: 40px;
+        margin-top:-15px;
+    }
+
+    /* IPAD: Tekst på forside */
+    .forside p{
+        font-size: 18px;
+        line-height: 30px;
+        margin-top:20px;
+    }
+
+    /* IPAD: Arrow down ikon */
+    .fa-arrow-down{
+        margin-bottom: 100px;
+        margin-top: 40px;
+        font-size: 30px;
+        visibility: hidden;
+    }
+
+    /* IPAD: Dropdown ikon ved opskrifter er ikke synlig */
+    .fa-angle-down{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    /*  IPAD: Alle call-to-benefit knapper til ipad */
+    .btn{
+        font-size: 20px;
+        padding:4px 16px;
+    }
+
+    /* KØKKEN HACKS */
+
+    /* IPAD: køkken kort tekst */
+    .kokken-kort p{
+        font-size: 18px;
+    }
+
+    /* IPAD: Beskrivende tekst nedenunder header på køkken hacks side */
+    .kokken-header p{
+        font-size: 18px;
+    }
+
+    /* KONTAKT OS */
+
+    /* IPAD: Kontakt container som bliver stacked */
+    .kontakt{
+        flex-direction: column;
+    }
+    
+    /* IPAD: Alt på kontakt side undtagen logo */
+    .kontakt-section{
+        flex-direction: row;
+        align-items: end;
+        margin: 0px;
+    }
+
+    /* IPAD: Alt tekst på kontakt-section div */
+    .kontakt-section p{
+        margin:20px;
+    }
+
+    /* IPAD: Plads rundt om mail på kontakt side */
+    .mail{
+        margin: 20px;
+    }
+
+    /* IPAD: Div til telefon og mail*/
+    .kontakt-box{
+        margin: 20px;
+    }
+
+    /* IPAD: Div til sociale medier*/
+    .kontakt-div{
+        flex-direction: column;
+        width:100%;
+    }
+
+    /* IPAD: Header på kontakt side */
+    .kontakt h2{
+        margin-left: 10px;
+    }
+
+    /* IPAD: Logo til kontakt side*/
+    .kontakt img{
+        width:40%;
+    }
+
+    /* Sociale medier ikoner fylder det hele */
+    .sociale-medier{
+        width:auto;
+    }
+
+    /* IPAD: Sociale medier ikoner */
+    .sociale-medier i{
+        margin:0px 0px 0px 20px;
+    }
+
+    /* RETTER */
+
+    /* IPAD: Kort med billede, knap, og tekst på alle sider med retter */
+    .retter{
+        display: flex;
+        flex-direction: column;
+        width:50%;
+        padding:25px;
+        margin-bottom:30px;
+    }
+
+
+    /* EN OPSKRIFT SIDE */
+
+    /* IPAD: Div med header og stjerner */
+    .opskrift-header{
+        margin:80px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* IPAD: Specifikt h2 */
+    .opskrift-header h2{
+        padding: 20px 0px;
+        font-size: 30px;
+    }
+
+    /* IPAD: Flexbox retning af alt indhold på en opskrift side */
+    .opskrift-flexbox{
+        flex-direction: column;
+    }
+
+    /* IPAD: Person, tid, budget */
+    .opskrift-info{
+        margin: 50px 0px;
+        justify-content: space-evenly;
+    }
+
+    /* IPAD: Vis inline-block af mobil/ipad billede af ret */
+    .opskrift-img-mobil{
+        display:inline-block;
+        padding-top:20px;
+        align-content: center;
+        width:100%;
+    }
+
+    /* IPAD: Skjul billede som er brugt på laptop skærm */
+    .opskrift-laptop{
+        display: none;
+    }
+
+    /* IPAD: Skjul billede af video */
+    .opskrift-video-laptop{
+        display: none;
+    }
+
+    /* IPAD: Vis billede af video på ipad/mobil skærm */
+    .opskrift-video-mobil{
+        display: block;
+    }
+
+    /* IPAD: Placering af footer fra toppen på sund ret */
+    .sund-ret{
+        top:2400px;
+    }
+
+    /* IPAD: Placering af "kig på køkken hacks" */
+    .kig-paa-kokken-hacks{
+        right:30px;
+        top:1500px;
+        width:18%;
+    }
+
+    /* IPAD: Mindre plads fra footer til kommentar-felt på kyllinge opskrift */
+    .kylling-kom{
+        margin-top: 500px;
+    }
+
+    /* Opskrift sider */
+
+    /* IPAD: Video */
+    .video{
+        width:100%;
+    }
+
+    /* IPAD: FLexbox til opskrift div */
+    .opskrift-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 80px;
+    }
+
+    /* IPAD: Tekst fylder mere på fremgangsmåde */
+    .fremgangsmaade-2{
+        max-width:1000px;
+    }
+
+    /* IPAD: Skriftstørrelse på kommentarer */
+    .kommentarer p{
+        font-size: 18px;
+    }
+
+    /* IPAD: Størrelse på stjerner */
+    .form-navn-stjerne h3{
+        font-size: 18px;
+    }
+
+    /* IPAD: Gør at nav menu er ovenpå filter */
+    .nav-menu{
+        z-index: 1;
+    }
+
+}
+
+
+
+/* ======================================================== MOBIL SKÆRM ======================================================== */
+
+@media only screen and (max-width: 500px) {
+    
+
+    /* MOBIL: Nav-menu eller nav ul */
+    .nav-menu{
+        margin-top: 3px;
+    }
+
+    /* MOBIL: Logo billede */
+    .logo{
+        width:160px;
+        margin:16px;
+        margin-left: 20px;
+        padding: 9px 0px 0px 0px;
+        top:0;
+    }
+
+    /* MOBIL: Header 1 på forsiden */
+    .forside h1{
+        font-size: 30px;
+        margin-top:-70px;
+    }
+
+    /* MOBIL: Tekst på forside */
+    .forside p{
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 15px;
+    }
+
+    /* MOBIL: Alle call-to-benefit knapper til mobil*/
+    .btn{
+        font-size: 16px;
+        padding: 3px 14px;
+    }
+
+    /* MOBIL: Billede på opskrif kategorier side */
+    .img-opskrift{
+        width:250px;
+    }
+
+    /* MOBIL: Div med opskrift kategorier */
+    .opskrifter{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* MOBIL: Pil ned ikon */
+    .fa-arrow-down{
+        margin-top: 10px;
+        margin-bottom: 50px;
+        visibility: hidden;
+    }
+
+    /* MOBIL: Header 2 */
+    h2{
+        font-size: 30px;
+    }
+
+    /* MOBIL: Tekst størrelse på køkken beskrivelse */
+    .kokken-header p{
+        font-size: 16px;
+    }
+
+    /* MOBIL: Tekst størrelse på køkken kort */
+    .kokken-kort p{
+        font-size: 16px;
+    }
+
+    /* MOBIL: Div til køkken formular */
+    .kokken-kommentar{
+        padding:0px 60px;
+        font-size: 16px;
+    }
+
+    /* EN OPSKRIFT SIDE */
+
+    /* MOBIL: Header 2 på en opskrift side */
+    .opskrift-header h2{
+        font-size: 25px;
+        padding-left: 20px;
+    }
+
+    /* MOBIL: Padding-top til kylling kommentar */
+    .kylling-kommentar{
+        padding:0px 60px;
+        margin-top: 500px;
+    }
+
+    /* IPAD: Forældre div til retter (på alle sider, ikke kun sunder retter) */
+    .sunde-retter{
+        margin:0;
+    }
+
+    /* MOBIL: FLexbox til opskrift div */
+    .opskrift-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 50px;
+    }
+
+    /* MOBIL: Div til hele kommentar sektion på en opskrift side */
+    .opskrifter-kommentar{
+        padding:0px 60px;
+    }
+
+
+    /* MOBIL: Tekst størrelse på kommentar felt */
+    #name, #tekst{
+        font-size: 16px;
+    }
+
+    /* MOBIL: Placering af kig på køkken hacks */
+    .kig-paa-kokken-hacks{
+        right:50px;
+        top:1125px;
+        width:28%;
+    }
+
+    /* KONTAKT OS */
+
+    /* MOBIL: Store div på kontakt side */
+    .kontakt{
+        line-height: 50px;
+    }
+
+     /* MOBIL: Header på kontakt side */
+     .kontakt h2{
+        margin-left: 15px;
+    }
+  
+    /* MOBIL: Header på telefon og mail (laver mere padding på det blå, så det er samme størrelse som sociale medier header) */
+    .tel-og-mail{
+        padding: 0px 40px;
+    }
+
+    /* MOBIL: Tekst på kontakt */
+    .kontakt p{
+        font-size: 16px;
+    }
+
+    /* MOBIL: Barn til kontakt */
+    .kontakt-section{
+        flex-direction: column;
+    }   
+
+    /* MOBIL: Logo billede på kontakt */
+    .kontakt img{
+        width:50%;
+    }
+    
+    /* MOBIL: Div til alle retter: billede, knap og tekst. */
+    .retter{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        padding: 50px;
+        margin-bottom:0px;
+    }
+
+    /* EN OPSKRIFT SIDE */
+
+    /* MOBIL: Div til køkken kommentarer */
+    .kommentarer p{
+        font-size: 16px;
+    }
+
+    /* MOBIL: Størrelse på stjerne ikon */
+    .fa-star{
+        font-size: 12px;
+    }
+
+    /* MOBIL: Pil som går op på toppen af siden */
+    .fa-arrow-up{
+        position: fixed;
+        left:43.5%;
+        right:43.5%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* MOBIL: Pil tilbage på siden før */
+    .fa-arrow-left{
+        position: absolute;
+        left:10px;
+        top:200px;
+        font-size: 18px;
+    }
+
+}
